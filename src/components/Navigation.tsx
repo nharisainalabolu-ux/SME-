@@ -6,7 +6,8 @@ import {
   Car, 
   GraduationCap, 
   Code2, 
-  Layers
+  Layers,
+  FolderTree
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -50,6 +51,13 @@ export const Navigation: React.FC<NavigationProps> = ({ activeModule, setActiveM
       subtext: 'Math, Arrays & Effects',
       icon: Code2,
       badge: 'Lab'
+    },
+    {
+      id: 'explorer' as ActiveModule,
+      name: 'All Files (22)',
+      subtext: 'Original Raw Vault',
+      icon: FolderTree,
+      badge: '100% Files'
     }
   ];
 

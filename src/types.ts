@@ -21,4 +21,4 @@ export interface CanteenFoodItem {
   popular?: boolean;
 }
 
-export type ActiveModule = 'peoplepulse' | 'canteen' | 'porsche' | 'ltsu-portal' | 'js-lab';
+export type ActiveModule = 'peoplepulse' | 'canteen' | 'porsche' | 'ltsu-portal' | 'js-lab' | 'explorer';

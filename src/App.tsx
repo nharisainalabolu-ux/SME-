@@ -6,6 +6,7 @@ import { CanteenPlanner } from './components/Canteen/CanteenPlanner';
 import { PorscheShowcase } from './components/Porsche/PorscheShowcase';
 import { LtsuPortal } from './components/LtsuPortal/LtsuPortal';
 import { JsLabWorkbench } from './components/JsLab/JsLabWorkbench';
+import { ZipFilesExplorer } from './components/Explorer/ZipFilesExplorer';
 
 export default function App() {
   const [activeModule, setActiveModule] = useState<ActiveModule>('peoplepulse');
@@ -25,6 +26,7 @@ export default function App() {
         {activeModule === 'porsche' && <PorscheShowcase />}
         {activeModule === 'ltsu-portal' && <LtsuPortal />}
         {activeModule === 'js-lab' && <JsLabWorkbench />}
+        {activeModule === 'explorer' && <ZipFilesExplorer />}
       </main>
     </div>
   );
