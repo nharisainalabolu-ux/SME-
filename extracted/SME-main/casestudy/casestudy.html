@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Canteen Meal Planner</title>
+    <link rel="stylesheet" href="casestudy.css">
+</head>
+
+<body>
+
+<script src="casestudy.js"></script>
+
+<div class="container">
+
+    <h1>Smart Canteen Meal Planner</h1>
+
+    <h2>Available Food Items</h2>
+
+    <div class="food-item">
+        <input type="checkbox" name="food" value="Burger">
+        Burger - ₹80
+    </div>
+
+    <div class="food-item">
+        <input type="checkbox" name="food" value="Sandwich">
+        Sandwich - ₹60
+    </div>
+
+    <div class="food-item">
+        <input type="checkbox" name="food" value="Pizza">
+        Pizza - ₹120
+    </div>
+
+    <div class="food-item">
+        <input type="checkbox" name="food" value="French fries">
+        French Fries - ₹50
+    </div>
+
+    <div class="food-item">
+        <input type="checkbox" name="food" value="Cold coffee">
+        Cold Coffee - ₹70
+    </div>
+
+    <h2>Enter Your Budget</h2>
+
+    <input type="number" id="budget"
+           placeholder="Enter your budget in rupees">
+
+    <h2>Number of Food Items</h2>
+
+    <input type="number" id="quantity"
+           placeholder="Enter number of items">
+
+    <button onclick="calculateBill()">Calculate Bill</button>
+
+    <div id="result"></div>
+
+</div>
+
+</body>
+</html>

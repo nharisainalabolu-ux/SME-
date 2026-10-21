@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <script>
+        function validateForm() {
+            let n = document.forms["signup"]["name"].value;
+            let u = document.forms["signup"]["username"].value;
+            let e = document.forms["signup"]["email"].value;
+            let p = document.forms["signup"]["password"].value;
+            let c = document.forms["signup"]["confirmPassword"].value;
+
+            if (n == "" || u == "" || e == "" || p == "" || c == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            if (p !== c) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            if( n.length < 3){
+                alert("Name should be more than 2 letters");
+                return false;
+            }
+
+            if(u.length < 5){
+                alert("Username should be more than 5 letters");
+                return false;
+            }
+            
+            if(p.length < 6 || c.length < 6){
+                alert("Password should be more than 6 letters");
+                return false;
+            }
+            
+            return true; // Form is valid
+        } 
+
+        function nameinput(){
+            const namefield = document.getElementById("f");
+            namefield.value = namefield.value.toUpperCase();
+        }
+        function usernameinput(){
+            const usernamefield = document.getElementById("u");
+            usernamefield.value = usernamefield.value.toUpperCase();
+        }
+        function namein(){
+            document.getElementById("f").style.backgroundColor="black";
+            document.getElementById("f").style.color="white";
+            document.getElementById("f").style.fontSize="20px";
+        }
+        function nameout(){
+            document.getElementById("f").style.backgroundColor="white";
+            document.getElementById("f").style.color="black";
+            document.getElementById("f").style.fontSize="15px";
+        }
+        function usernamein(){
+            document.getElementById("u").style.backgroundColor="black";
+            document.getElementById("u").style.color="white";
+            document.getElementById("u").style.fontSize="20px";
+        }
+        function usernameout(){
+            document.getElementById("u").style.backgroundColor="white";
+            document.getElementById("u").style.color="black";
+            document.getElementById("u").style.fontSize="15px";
+        }
+        function buttonon(){
+            document.getElementById("bu").style.color="black";
+            document.getElementById("bu").style.fontSize="20px";
+        }
+        function emailin(){
+            document.getElementById("e").style.backgroundColor="black";
+            document.getElementById("e").style.color="white";
+            document.getElementById("e").style.fontSize="20px";
+        }
+        function emailout(){
+            document.getElementById("e").style.backgroundColor="white";
+            document.getElementById("e").style.color="black";
+            document.getElementById("e").style.fontSize="15px";
+        }
+        function passin(){
+            document.getElementById("p").style.backgroundColor="black";
+            document.getElementById("p").style.color="white";
+            document.getElementById("p").style.fontSize="20px";
+        }
+        function passout(){
+            document.getElementById("p").style.backgroundColor="white";
+            document.getElementById("p").style.color="black";
+            document.getElementById("p").style.fontSize="15px";
+        }
+        function cpassin(){
+            document.getElementById("cp").style.backgroundColor="black";
+            document.getElementById("cp").style.color="white";
+            document.getElementById("cp").style.fontSize="20px";
+        }
+        function cpassout(){
+            document.getElementById("cp").style.backgroundColor="white";
+            document.getElementById("cp").style.color="black";
+            document.getElementById("cp").style.fontSize="15px";
+        }
+        function buttonout(){
+            document.getElementById("bu").style.color="white";
+            document.getElementById("bu").style.fontSize="15px";
+        }
+
+        
+    </script>
+
+    <h1><b>Lamrin Tech Skills University</b><br> Signup</h1>
+    <div class="container">
+        <form name="signup" method="post" onsubmit="return validateForm()">
+            <div class="block">
+                <div id="a1">
+                    Full Name<br>
+                    <input type="text" class="lol" id="f" placeholder="Enter your full name" name="name" oninput="nameinput()" onmouseover="namein()" onmouseout="nameout()">
+                </div>
+                <div id="a2">
+                    Username<br>
+                    <input type="text" class="lol" id="u" placeholder="Choose a username" name="username" oninput="usernameinput()" onmouseover="usernamein()" onmouseout="usernameout()">
+                </div>
+                <div id="a3">
+                    Email<br>
+                    <input type="email" class="lol" id="e" placeholder="Enter your email" name="email" onmouseover="emailin()" onmouseout="emailout()">
+                </div>
+                <div id="a4">
+                    Password<br>
+                    <input type="password" class="lol" id="p" placeholder="Create a password" name="password" onmouseover="passin()" onmouseout="passout()">
+                </div>
+                <div id="a5">
+                    Confirm Password<br>
+                    <input type="password" class="lol" id="cp" placeholder="Confirm your password" name="confirmPassword" onmouseover="cpassin()" onmouseout="cpassout()">
+                </div>
+                <div id="b1">
+                    <small>
+                        Already have an account?
+                        <a>Login</a>
+                    </small>
+                </div>
+            </div>
+            <button type="submit" id="bu" onmouseover="buttonon()" onmouseout="buttonout()">Signup</button>
+        </form>
+    </div>
+
+</body>
+</html>

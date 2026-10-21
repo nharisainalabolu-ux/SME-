@@ -1,0 +1,6 @@
+{
+  "name": "PeoplePulse & SME Project Suite",
+  "description": "Comprehensive workforce intelligence platform featuring employee analytics, salary distribution insights, Smart Canteen Meal Planner, Porsche luxury showcase, and LTSU engineering labs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

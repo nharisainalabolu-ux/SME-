@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        function findMin() {
+        let arr = [13, 22, 43, 64, 35];
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        document.getElementById("para").innerHTML += "<br>The minimum value in the array is: " + min;
+    }
+    function findMax() {
+        let arr = [21, 20, 53, 46, 82];
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        document.getElementById("para").innerHTML += "<br>The maximum value in the array is: " + max;
+    }
+    function findSum() {
+        let arr = [15, 53, 64, 35, 26];
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        document.getElementById("para").innerHTML += "<br>The sum of the array elements is: " + sum;
+    }
+    function displayeven() {
+        let arr = [12, 25, 36, 47, 58];
+        let evenNumbers = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                evenNumbers.push(arr[i]);
+            }
+        }
+        document.getElementById("para").innerHTML += "<br>The even numbers in the array are: " + evenNumbers.join(", ");
+    }
+    function displayvowel(){
+        let str = prompt("Enter a string:");
+        let vowels = [];
+        for (let i = 0; i < str.length; i++) {
+            let char = str[i].toLowerCase();
+            if ("aeiou".includes(char)) {
+                vowels.push(char);
+            }
+        }
+        document.getElementById("para").innerHTML += "<br>The vowels in the string are: " + vowels.join(", ");
+    }
+    function search(){
+        let arr = [12, 25, 36, 47, 58];
+        let num = parseInt(prompt("Enter a number to search:"));
+        let found = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === num) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            document.getElementById("para").innerHTML += "<br>The number " + num + " is found in the array.";
+        } else {
+            document.getElementById("para").innerHTML += "<br>The number " + num + " is not found in the array.";
+        }
+    }
+    </script>
+    <p id ="para">Array Operations</p>
+    <button style="background-color: lightgray;" height="35px"; width="35px"; onclick="findMin()">Find Min</button><br><br>
+
+    <button style="background-color: lightgray;" height="35px"; width="35px"; onclick="findMax()">Find Max</button><br><br> 
+
+    <button style="background-color: lightgray;" height="35px"; width="35px"; onclick="findSum()">Find Sum</button><br><br>
+
+    <button style="background-color: lightgray;" height="35px"; width="35px"; onclick="displayeven()">Display Even Numbers</button><br><br>
+
+    <button style="background-color: lightgray;" height="35px"; width="35px"; onclick="displayvowel()">Display Vowels</button><br><br>
+
+    <button style="background-color: lightgray;" height="35px"; width="35px"; onclick="search()">Search Number</button><br><br>
+</body>
+</html>

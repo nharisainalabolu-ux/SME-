@@ -1,0 +1,71 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #cccccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        h2 {
+            color: #333333;
+        }
+
+        .food-item {
+            padding: 10px;
+            margin: 8px 0;
+            background-color: #f1f5f9;
+            border-radius: 6px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #eff6ff;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
